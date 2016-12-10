@@ -38,7 +38,8 @@
 /* Functions to be used for AVR*/
 extern void LCDinit(void);								//Initializes LCD
 extern void LCDclr(void);								//Clears LCD
-extern void LCDprint(const char *s);					// print string on lcd (no auto linefeed)
+extern void LCDprint(const char*);						// print string on lcd (no auto linefeed)
+extern void LCDprintXY(const char*,uint8_t, uint8_t);	// print string on lcd (no auto linefeed), in X,Y Position
 extern void LCDGotoXY(uint8_t, uint8_t);				//Cursor to X Y position
 extern void LCDStringXY(const uint8_t*, uint8_t, uint8_t);//copies flash string to LCD at x,y
 

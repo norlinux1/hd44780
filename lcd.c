@@ -111,3 +111,12 @@ void LCDprint(const char *s)
 	while ( (c = *s++) )
 		LCDsendChar(c);
 }
+
+void LCDprintXY(const char *s,uint8_t x, uint8_t y)
+/* print string on lcd (no auto linefeed) in X,Y position*/
+{
+	LCDGotoXY(x,y);
+	register char c;
+	while ( (c = *s++) )
+	LCDsendChar(c);
+}
